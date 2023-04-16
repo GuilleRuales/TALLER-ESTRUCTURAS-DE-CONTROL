@@ -141,8 +141,6 @@ do {
         printf("TOTAL SIN DESCUENTO         $ %.2f\n", TOTAL);
         printf("SUBTOTAL                    $ %.2f\n", SUBTOTAL);
         printf("\nTOTAL FINAL                 $ %.2f\n", SUBTOTAL);
-        printf("\nNOMBRE: %s", nombre[16]);
-        printf("\nCEDULA: %i", cedula[10]);
       
       break;
       case'c':
