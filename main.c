@@ -2,7 +2,7 @@
 
 int main(){
 int a , llantas = 0, pastillas = 0, embrague = 0, faro = 0, radiador = 0 , cedula[10];
-float total_llantas , total_pastillas , total_embrague , total_faro , total_radiador , DESC , TOTAL , SUBTOTAL;
+float total_llantas  , total_pastillas , total_embrague , total_faro , total_radiador , DESC , TOTAL , SUBTOTAL;
 char op, productos, nombre[16];  
 a = 0;
 
@@ -27,6 +27,7 @@ do {
           printf("\nElija una opción:\n");
           scanf (" %c", &productos);
 
+          
         if ((productos == 'a')||(productos == 'b')||(productos == 'c')||(productos == 'd')||(productos == 'e'))
         { 
         
@@ -131,16 +132,32 @@ do {
           DESC = (0.1 * TOTAL)/100;
         }
         SUBTOTAL = TOTAL - DESC;
-            
-        printf("\nLLANTAS                     $ %.2f\n", total_llantas);
-        printf("kIT PASTILLAS DE FRENO      $ %.2f\n", total_pastillas);
-        printf("KIT DE EMBRAGUE             $ %.2f\n", total_embrague);
-        printf("FARO                        $ %.2f\n", total_faro);
-        printf("RADIADOR                    $ %.2f\n", total_radiador);
-        printf("\nDESCUENTO                   $ %.2f\n", DESC);
-        printf("TOTAL SIN DESCUENTO         $ %.2f\n", TOTAL);
-        printf("SUBTOTAL                    $ %.2f\n", SUBTOTAL);
-        printf("\nTOTAL FINAL                 $ %.2f\n", SUBTOTAL);
+
+        printf("\nPRODUCTO                  CANTIDAD        PRECIO        TOTAL\n");
+        if (llantas > 0)
+        {
+          printf("\nLLANTAS                      %i             $ 150      $ %.2f\n",llantas , total_llantas);
+        }
+        if (pastillas > 0)
+        {
+        printf("kIT PASTILLAS DE FRENO       %i             $  55      $ %.2f\n", pastillas , total_pastillas);
+        }
+        if (embrague > 0)
+        {
+        printf("KIT DE EMBRAGUE              %i             $ 180      $ %.2f\n", embrague , total_embrague);
+        }
+        if (faro > 0)
+        {
+        printf("FARO                         %i             $  70      $ %.2f\n", faro , total_faro);
+        }
+        if (faro > 0)
+        {
+        printf("RADIADOR                     %i             $ 120      $ %.2f\n", radiador , total_radiador);
+        }
+        printf("\nDESCUENTO                                             $ %.2f\n", DESC);
+        printf("TOTAL SIN DESCUENTO                                   $ %.2f\n", TOTAL);
+        printf("SUBTOTAL                                              $ %.2f\n", SUBTOTAL);
+        printf("\nTOTAL FINAL                                           $ %.2f\n", SUBTOTAL);
       
       break;
       case'c':
@@ -157,5 +174,6 @@ do {
   }
 }while (op != 'c');
 
+  
 return 0;
 }
